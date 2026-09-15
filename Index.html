@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sistema de Diagnóstico e Dashboard</title>
+
+  <!-- Arquivos de estilo -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/questionario.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- Biblioteca Plotly para os gráficos -->
+  <script
+    src="https://cdn.plot.ly/plotly-2.35.2.min.js"
+    charset="utf-8">
+  </script>
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1>Diagnóstico de Maturidade</h1>
+
+      <span id="header-status">
+        Etapa do Questionário
+      </span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ================================= -->
+    <!-- VISÃO 1: QUESTIONÁRIO             -->
+    <!-- ================================= -->
+
+    <section
+      id="view-questionario"
+      class="card">
+
+      <div id="questionario-content">
+        <!--
+          O JavaScript irá inserir:
+          - Pergunta
+          - Alternativas
+          - Botões
+          - Progresso
+        -->
+      </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- VISÃO 2: CARREGAMENTO             -->
+    <!-- ================================= -->
+
+    <section
+      id="view-loading"
+      class="card hidden text-center">
+
+      <div class="loading-content">
+
+        <div class="spinner"></div>
+
+        <h2>Processando diagnóstico...</h2>
+
+        <p>
+          Estamos analisando suas respostas.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================================= -->
+    <!-- VISÃO 3: DASHBOARD                -->
+    <!-- ================================= -->
+
+    <section
+      id="view-dashboard"
+      class="hidden">
+
+      <div class="dashboard-header">
+        <h2>Resultado do Diagnóstico</h2>
+
+        <p>
+          Confira abaixo os resultados da sua avaliação.
+        </p>
+      </div>
+
+
+      <!-- Indicadores principais -->
+      <div
+        id="dashboard-indicators"
+        class="dashboard-indicators">
+      </div>
+
+
+      <!-- Gráficos -->
+      <div
+        id="dashboard-charts"
+        class="dashboard-charts">
+
+        <div
+          id="chart-maturidade"
+          class="chart">
+        </div>
+
+        <div
+          id="chart-categorias"
+          class="chart">
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- JavaScript principal -->
+  <script
+    type="module"
+    src="js/app.js">
+  </script>
+
+</body>
+
+</html>
